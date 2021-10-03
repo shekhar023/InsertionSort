@@ -18,7 +18,7 @@ void printArray(int array[], int size)
     cout<<endl;
 }
 
-void Insert(int array[], int size, int pointer)
+void Insert(int array[], int pointer)
 {
     for(auto index = pointer - 1; index >= 0 ; --index)
     {
@@ -37,7 +37,7 @@ void InsertionSort(int array[], int size)
 {
     for( int pointer = 0; pointer < size ; ++pointer)
     {
-        Insert(array,size, pointer);
+        Insert(array,pointer);
     }
 }
 
@@ -60,6 +60,8 @@ int main(int argc, const char * argv[]) {
     InsertionSort(array,size);
     cout <<" Array after Insertion Sort" <<endl;
     printArray(array,size);
+    
+    delete [] array;
    
     return 0;
 }
